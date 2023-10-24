@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador de Caracteres</title>
+  <style>
+    .container {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .resultado {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contador de Caracteres</h1>
+    <textarea id="texto"></textarea>
+    <div class="resultado"></div>
+  </div>
+
+  <script>
+    const texto = document.getElementById("texto");
+    const resultado = document.querySelector(".resultado");
+
+    texto.addEventListener("input", () => {
+      const valor = texto.value.length;
+      resultado.innerHTML = `Número de caracteres: ${valor}`;
+    });
+  </script>
+</body>
+</html>
